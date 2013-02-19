@@ -8,7 +8,7 @@ public class Account {
 	
 	String password;
 	
-	Type types;   // BUYR-COL/DLR/GLY, SLR-ART/DLR/GLY, EMPL-CCS/PSG/GMR/EMP
+	AccountType types;   // BUYR-COL/DLR/GLY, SLR-ART/DLR/GLY, EMPL-CCS/PSG/GMR/EMP
 	Role[] roles; // BUYR, SLR, EMPL
 	
 	Status status;
