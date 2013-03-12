@@ -12,6 +12,6 @@
     <name>JBoss IDC MarketScape Demo</name>
 
     <modules>
-    	<module>api</module>
+    	<module>marketscape_api</module>
     </modules>
 </project>
