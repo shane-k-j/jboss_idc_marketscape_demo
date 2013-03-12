@@ -5,13 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.jboss.idc.marketscape.demo</groupId>
-    <artifactId>jboss-idc-marketscape-demo</artifactId>
+    <artifactId>twg</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>JBoss IDC MarketScape Demo</name>
 
     <modules>
-    	<module>marketscape_api</module>
+    	<module>twg_api</module>
+    	<module>twg-beans</module>
     </modules>
 </project>

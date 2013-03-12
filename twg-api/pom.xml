@@ -6,12 +6,12 @@
     
 	<parent>
 		<groupId>com.jboss.idc.marketscape.demo</groupId>
-		<artifactId>jboss-idc-marketscape-demo</artifactId>
+		<artifactId>twg</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
-	<artifactId>api</artifactId>
+	<artifactId>twg_api</artifactId>
 	
-	<name>API</name>
+	<name>TWG API</name>
 </project>
