@@ -14,4 +14,18 @@
 	<artifactId>twg-beans</artifactId>
 	
 	<name>TWG Beans</name>
+	
+	<dependencies>
+	    <dependency>
+            <groupId>com.jboss.idc.marketscape.demo</groupId>
+            <artifactId>twg-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- provided -->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>
