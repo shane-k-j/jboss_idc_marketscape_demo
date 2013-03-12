@@ -11,7 +11,7 @@
 		<relativePath>..</relativePath>
 	</parent>
 
-	<artifactId>twg_api</artifactId>
+	<artifactId>twg-api</artifactId>
 	
 	<name>TWG API</name>
 </project>
