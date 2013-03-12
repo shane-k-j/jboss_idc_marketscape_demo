@@ -4,7 +4,7 @@ public class Piece {
 
 	int id;
 	
-	String name;
+	String title;
 	
 	String imageId;
 	

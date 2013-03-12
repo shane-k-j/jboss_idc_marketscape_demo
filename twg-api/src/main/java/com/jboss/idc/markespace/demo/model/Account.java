@@ -6,12 +6,15 @@ public class Account {
 	
 	int id;
 	
+	String username;
 	String password;
 	
-	AccountType types;   // BUYR-COL/DLR/GLY, SLR-ART/DLR/GLY, EMPL-CCS/PSG/GMR/EMP
-	Role[] roles; // BUYR, SLR, EMPL
+	// BUYR, SELR, EMPL
+	// BUYR - COL|DLR|GLY, SELR - ART|DLR|GLY, EMPL - CCS|PSG|GMR|OEMP
+	AccountType type;
+	AccountRole role;
 	
-	Status status;
+	AccountStatus status;
 	
 	String firstName;
 	String lastName;
@@ -26,6 +29,8 @@ public class Account {
 	
 	String homePhone;
 	String mobilePhone;
+	
+	String emailAddress;
 	
 	Date created;
 }
