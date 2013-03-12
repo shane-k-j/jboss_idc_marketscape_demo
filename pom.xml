@@ -12,7 +12,7 @@
     <name>JBoss IDC MarketScape Demo</name>
 
     <modules>
-    	<module>twg_api</module>
+    	<module>twg-api</module>
     	<module>twg-beans</module>
     </modules>
 </project>
