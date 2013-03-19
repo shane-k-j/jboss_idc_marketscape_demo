@@ -1,18 +1,12 @@
 package com.jboss.idc.marketspace.demo.twg.crm.ejb.persistence;
 
-import java.util.Date;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
 import com.jboss.idc.markespace.demo.twg.crm.api.AccountRole;
@@ -20,163 +14,156 @@ import com.jboss.idc.markespace.demo.twg.crm.api.AccountStatus;
 import com.jboss.idc.markespace.demo.twg.crm.api.AccountType;
 
 @Entity
-@Table(name = "tbl_accounts")
+@Table(name = "tbl_accounts")                   // ACCOUNTS
 @Cacheable
 public class AccountEntity {
-	
-	@Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator = "seq_accounts")
-    @SequenceGenerator(name = "seq_accounts",
-            sequenceName = "seq_accounts")
-	private Integer id;
-	
-	// BUYR, SELR, EMPL
-	@Enumerated(EnumType.STRING)
-	private AccountType type;
-	
-	// BUYR - COL|DLR|GLY, SELR - ART|DLR|GLY, EMPL - CCS|PSG|GMR|OEMP
-	@Enumerated(EnumType.STRING)
-	private AccountRole role;
-	
-	private AccountStatus status;
-	
-	private String name;
-	
-	private String streetAddress;
-	private String city;
-	private String state;
-	private String country;
-	private String zipCode;
-	
-	private String homePhone;
-	private String mobilePhone;
-	
-	private String emailAddress;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date created;
-	
-	@Version
-	private Integer version;
+    
+    @Id
+    private String id;                          // Account_ID_c                      char(16)
+    
+    @Enumerated(EnumType.STRING)
+    private AccountType type;                   // User_Domain_c                     char(4)
+    
+    @Enumerated(EnumType.STRING)
+    private AccountRole role;                   // User_Type_c                       char(3)
+    
+    @Enumerated(EnumType.STRING)
+    private AccountStatus status;               // Account_Status_c                  char(6)
+    
+    private String name;                        // Name                              char(16)
+    private String lastName;                    // Last_Name_c                       char(16)
+    
+    private String streetAddress;               // Street_Address_c                  char(24)
+    private String city;                        // City_c                            char(20)
+    private String state;                       // State_c                           char(2)
+    private String country;                     // Country_c                         char(10)
+    private String zipCode;                     // Zip_Code_c                        char(5) 3.0
+    
+    private String homePhone;                   // Home_Phone_Number_c               char(16)
+    private String mobilePhone;                 // Mobile_Phone_Number_c             char(16)
+    
+    private String emailAddress;                // Email_c                           char(36)
+    
+    @Version
+    private Integer version;
 
-	public Integer getId() {
-		return id;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public AccountType getType() {
-		return type;
-	}
+    public AccountType getType() {
+        return type;
+    }
 
-	public void setType(AccountType type) {
-		this.type = type;
-	}
+    public void setType(AccountType type) {
+        this.type = type;
+    }
 
-	public AccountRole getRole() {
-		return role;
-	}
+    public AccountRole getRole() {
+        return role;
+    }
 
-	public void setRole(AccountRole role) {
-		this.role = role;
-	}
+    public void setRole(AccountRole role) {
+        this.role = role;
+    }
 
-	public AccountStatus getStatus() {
-		return status;
-	}
+    public AccountStatus getStatus() {
+        return status;
+    }
 
-	public void setStatus(AccountStatus status) {
-		this.status = status;
-	}
+    public void setStatus(AccountStatus status) {
+        this.status = status;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getStreetAddress() {
-		return streetAddress;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setStreetAddress(String streetAddress) {
-		this.streetAddress = streetAddress;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getStreetAddress() {
+        return streetAddress;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public String getCountry() {
-		return country;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
 
-	public String getZipCode() {
-		return zipCode;
-	}
+    public String getCountry() {
+        return country;
+    }
 
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
-	}
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
-	public String getHomePhone() {
-		return homePhone;
-	}
+    public String getZipCode() {
+        return zipCode;
+    }
 
-	public void setHomePhone(String homePhone) {
-		this.homePhone = homePhone;
-	}
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
 
-	public String getMobilePhone() {
-		return mobilePhone;
-	}
+    public String getHomePhone() {
+        return homePhone;
+    }
 
-	public void setMobilePhone(String mobilePhone) {
-		this.mobilePhone = mobilePhone;
-	}
+    public void setHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+    }
 
-	public String getEmailAddress() {
-		return emailAddress;
-	}
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
-	}
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+    }
 
-	public Date getCreated() {
-		return created;
-	}
+    public String getEmailAddress() {
+        return emailAddress;
+    }
 
-	public void setCreated(Date created) {
-		this.created = created;
-	}
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
 
-	public Integer getVersion() {
-		return version;
-	}
+    public Integer getVersion() {
+        return version;
+    }
 
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
 }
