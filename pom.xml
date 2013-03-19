@@ -14,6 +14,12 @@
     <modules>
     	<module>twg-api</module>
     	<module>twg-beans</module>
+    	<module>twg-erp</module>
+    	<module>twg-crm</module>
+    	<module>twg-crm-beans</module>
+    	<module>twg-erp-beans</module>
+    	<module>twg-crm-api</module>
+    	<module>twg-erp-api</module>
     </modules>
     
    <dependencyManagement>
